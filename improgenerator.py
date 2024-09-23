@@ -125,10 +125,10 @@ if page == "Startseite":
     st.markdown("---")
     col1, col2 = st.columns([1, 3])
     with col1:
-        if os.path.exists("insta.jpg"):
-            st.image("insta.jpg", width=50)
+        if os.path.exists("Insta.jpg"):
+            st.image("Insta.jpg", width=50)
         else:
-            st.write("Instagram-Logo nicht gefunden.")
+            st.write("Instagram-Logo")
     with col2:
         st.markdown(
             '<a href="https://www.instagram.com/impro_fessionell" target="_blank" class="social-icon">Folge uns auf Instagram @impro_fessionell</a>',
