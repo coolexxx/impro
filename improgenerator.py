@@ -103,7 +103,7 @@ if page == "Startseite":
             st.write("Logo nicht gefunden.")
         st.markdown('</div>', unsafe_allow_html=True)
     st.title("Willkommen bei IMPROfessionell!")
-    st.markdown('<p class="big-font">Jeden Dienstag um 18:00 Uhr</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">Jeden Dienstag um 18:00 Uhr (Zusatztermin: Mittwoch 18:00 Uhr)</p>', unsafe_allow_html=True)
 
     # Countdown zum nächsten Dienstag
     today = datetime.now()
