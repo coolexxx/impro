@@ -176,18 +176,25 @@ elif page == "Improgenerator":
 elif page == "Spiele":
     st.title("Impro-Spiele")
 
-    if os.path.exists("Spiele.pdf"):
-    with open("Spiele.pdf", "rb") as pdf_file:
-        PDFbyte = pdf_file.read()
+if page == "Spiele":
+    st.title("Impro-Spiele")
     
-    st.download_button(
-        label="Spiele als PDF herunterladen",
-        data=PDFbyte,
-        file_name="Spiele.pdf",
-        mime="application/octet-stream"
-    )
-else:
-    st.warning("Die PDF-Datei 'Spiele.pdf' wurde nicht gefunden.")
+    st.write("Debug: Versuche, PDF-Datei zu laden")  # Debug-Ausgabe
+    
+    # PDF-Download-Link für Spiele
+    if os.path.exists("Spiele.pdf"):
+        st.write("Debug: PDF-Datei gefunden")  # Debug-Ausgabe
+        with open("Spiele.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        
+        st.download_button(
+            label="Spiele als PDF herunterladen",
+            data=PDFbyte,
+            file_name="Spiele.pdf",
+            mime="application/octet-stream"
+        )
+    else:
+        st.warning("Die PDF-Datei 'Spiele.pdf' wurde nicht gefunden.")
     
     games = get_games("spiele.txt")
     for game in games:
