@@ -179,11 +179,9 @@ elif page == "Spiele":
 if page == "Spiele":
     st.title("Impro-Spiele")
     
-    st.write("Debug: Versuche, PDF-Datei zu laden")  # Debug-Ausgabe
     
     # PDF-Download-Link für Spiele
     if os.path.exists("Spiele.pdf"):
-        st.write("Debug: PDF-Datei gefunden")  # Debug-Ausgabe
         with open("Spiele.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         
